@@ -55,9 +55,10 @@ export function createSocket(): KahootAltSocket {
   return io(url, {
     path: '/socket.io',
     withCredentials: true,
-    timeout: 8000,
+    timeout: 20000,
     reconnection: true,
-    reconnectionAttempts: 10,
-    transports: ['websocket']
+    reconnectionAttempts: 15,
+    reconnectionDelay: 1000,
+    transports: ['websocket', 'polling']
   });
 }
