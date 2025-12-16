@@ -13,12 +13,15 @@ import type {
 import { addPlayer, createRoom, getRoom, publicPlayers, removePlayer, removeRoom } from "./state";
 
 const PORT = Number(process.env.PORT ?? 3001);
-const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN ?? "http://localhost:5173";
+const CLIENT_ORIGIN = process.env.CLIENT_URL ?? process.env.CLIENT_ORIGIN ?? "http://localhost:5173";
 
 const ALLOWED_ORIGINS = new Set<string>([
   CLIENT_ORIGIN,
   "http://localhost:5173",
-  "http://127.0.0.1:5173"
+  "http://127.0.0.1:5173",
+  "https://openquiz.vercel.app",
+  "https://openquiz-yohurokano.vercel.app",
+  "https://openquiz-git-main-yohurokano.vercel.app"
 ]);
 
 const app = express();
