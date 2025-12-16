@@ -1248,7 +1248,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 13px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7);
-  background: linear-gradient(to top, rgba(139, 92, 246, 0.9) 0%, transparent 100%);
+  background: transparent;
   pointer-events: none;
   z-index: 10;
 }
