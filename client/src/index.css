@@ -1253,30 +1253,34 @@ input:focus, textarea:focus, select:focus {
 /* ===== THEME TOGGLE ===== */
 .themeToggle {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 20px;
+  right: 20px;
   z-index: 1000;
-  width: 44px;
-  height: 44px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: none;
-  background: var(--card);
-  color: var(--text);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease;
 }
 
 .themeToggle:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .themeToggle:active {
   transform: scale(0.95);
+}
+
+.themeToggle svg {
+  width: 16px;
+  height: 16px;
 }
 
 [data-theme="dark"] .themeToggle {
