@@ -57,6 +57,7 @@ export function createSocket(): KahootAltSocket {
     withCredentials: true,
     timeout: 8000,
     reconnection: true,
-    reconnectionAttempts: 10
+    reconnectionAttempts: 10,
+    transports: ['websocket']
   });
 }
