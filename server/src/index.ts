@@ -19,7 +19,9 @@ const ALLOWED_ORIGINS = new Set<string>([
   CLIENT_ORIGIN,
   "http://localhost:5173",
   "http://127.0.0.1:5173",
-  "https://openquiz-sigma.vercel.app"
+  "https://openquiz-sigma.vercel.app",
+  "https://openquiz.xyz",
+  "https://www.openquiz.xyz"
 ]);
 
 const app = express();
