@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useRoomStore } from '../lib/roomStore';
-import { Users, Trophy, Check, ArrowRight, Play, Pause, SkipForward, Eye, Flame, ArrowUp, ArrowDown } from 'lucide-react';
+import { Users, Trophy, Check, ArrowRight, Play, SkipForward, Eye, Flame, ArrowUp, ArrowDown } from 'lucide-react';
 import TimerRing from '../components/TimerRing';
 import Avatar from '../components/Avatar';
 import Confetti from '../components/Confetti';
@@ -19,7 +19,7 @@ export default function HostRoom() {
 
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [showConfetti, setShowConfetti] = useState(false);
+  const [showConfetti] = useState(false);
 
   const phase = roomState?.phase ?? 'lobby';
   const playerCount = roomState?.players?.length ?? 0;
@@ -28,7 +28,7 @@ export default function HostRoom() {
   const timeSeconds = timeRemaining !== null ? Math.ceil(timeRemaining / 1000) : null;
   const totalTime = roomState?.question?.timeLimitMs ? Math.ceil(roomState.question.timeLimitMs / 1000) : 20;
   const answeredCount = roomState?.answeredCount ?? 0;
-  const isPaused = roomState?.isPaused ?? false;
+  // const isPaused = roomState?.isPaused ?? false;
 
   return (
     <div className="shell">
